@@ -12,11 +12,13 @@
 %% Adjust the page margins
 \usepackage[scale=0.75]{geometry}
 
+\usepackage{ragged2e}
+
 %% Personal data
 \firstname{David}
 \familyname{Gudeman}
 %\title{Resumé title (optional)}
-\address{1001 Hamilton Ave}{Palo Alto, CA}
+\address{Hamilton Ave}{Palo Alto, CA}
 \mobile{(805)~405-3976}
 %\phone{+2~(345)~678~901}
 %\fax{+3~(456)~789~012}
@@ -38,10 +40,23 @@
 \cventry{October, 2014--December, 2014}{Certificate of Completion}{General Assembly}{San Francisco, CA}{\textit{}}{Description}  % arguments 3 to 6 can be left empty
 \cventry{February, 2013}{Bachelor of Science, Physical Chemistry}{University of California, Los Angeles}{Los Angeles, CA}{\textit{3.93}}{Description}
 
+
+
+
+\section{Projects}
+\cventry{}{\href{http://tictactoe.gudeman.co/}{tictactoe.gudeman.co}\vspace{1mm}}{Tic-Tac-Toe\vspace{1mm}}{}{}{Web application that allows a user to play against another human or a computer. Real time two player functionality was accomplished by using websockets/socket.io. Any number of two player games can be played at the same time without problems. The computer player was created by implimenting the \textbf{\href{http://en.wikipedia.org/wiki/Minimax\#Combinatorial_game_theory}{MinMax}} decision rule.}
+\vspace{2mm}
+\cventry{}{\href{http://thebestblogever.herokuapp.com/}{thebestblogever.herokuapp.com}\vspace{1mm}}{TheBestBlogEver\vspace{1mm}}{}{}{Traditional CRUD app inspired by reddit. Built with a Node.js backend. It utilizes Passport for Sign up/login, PostgreSQL for the database and Sequelize for the ORM. It features an infinite/recursive commenting system in which comments on comments are properly indented. AJAX is used when a user creates/updates/deletes a comment so the page does not refresh.}
+
 % \section{Master thesis}
 % \cvitem{title}{\emph{Title}}
 % \cvitem{supervisors}{Supervisors}
 % \cvitem{description}{Short thesis abstract}
+
+\section{Technical skills}
+\cvdoubleitem{Languages}{JavaScript, Ruby, HTML, CSS}{Authorization}{Passport Local, Bcrypt}
+\cvdoubleitem{Frameworks}{Node.js, ExpressJS, Rails}{Testing}{Mocha, Chai, RSpec}
+\cvdoubleitem{Database tools}{SQL, PostgreSQL, Sequelize, ActiveRecord}{Other}{Git/GitHub, AWS, jQuery, AJAX, JSON, Bootstrap, socket.io}
 
 \section{Experience}
 %\subsection{Vocational}
@@ -67,16 +82,9 @@
 % \subsection{Miscellaneous}
 % \cventry{year--year}{Job title}{Employer}{City}{}{Description}
 
-\section{Technical skills}
-\cvdoubleitem{Languages}{JavaScript, Ruby, HTML, CSS}{Authorization}{Passport Local, Bcrypt}
-\cvdoubleitem{Frameworks}{Node.js, ExpressJS, Rails}{Testing}{Mocha, Chai, RSpec}
-\cvdoubleitem{Database tools}{SQL, PostgreSQL, Sequelize, ActiveRecord}{Other}{Git/GitHub, Heroku, jQuery, AJAX, JSON, Bootstrap, socket.io}
 
-\section{Projects}
-\cvitemwithcomment{Tic-Tac-Toe}{Address}{Built with Node.js and socket.io to handle two player games. Also features a computer opponent whos moves are decided by min-max theorem implemented in javascript}
 
-\cvitemwithcomment{TheBestBlogEver}{\href{http://thebestblogever.herokuapp.com/}{thebestblogever.herokuapp.com}}{Built with Node.js featuring infinite recursive comments}
-\cvitemwithcomment{TwoFun}{address}{Built with an ionic front end and a rails back end}
+
 
 % \section{Interests}
 % \cvitem{hobby 1}{Description}
